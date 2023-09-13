@@ -6,13 +6,16 @@ class TitleScreen extends Stage {
      */
     onResetEvent() {
         ; // TODO
+        console.log('OnReset'); 
     }
 
     /**
      *  action to perform when leaving this screen (state change)
      */
     onDestroyEvent() {
-        ; // TODO
+        ; // TODO 
+
+    console.log('DestroyEventExecuted'); 
     }
 };
 
