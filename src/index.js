@@ -6,13 +6,14 @@ import {
     video,
     utils,
     plugin,
-    pool
+    pool,
 } from "melonjs";
 
 import "index.css";
 
 import TitleScreen from "js/stage/title.js";
 import PlayScreen from "js/stage/play.js";
+import EndTitleScreen from "js/stage/end-title.js";
 import PlayerEntity from "js/renderables/player.js";
 
 import DataManifest from "manifest.js";
@@ -45,6 +46,7 @@ device.onReady(() => {
         // set the user defined game stages
         state.set(state.MENU, new TitleScreen());
         state.set(state.PLAY, new PlayScreen());
+        state.set(state.GAME_END, new EndTitleScreen());
 
         // add our player entity in the entity pool
         pool.register("mainPlayer", PlayerEntity);
