@@ -15,4 +15,18 @@ const DataManifest = [
     }
 ];
 
+const DataManifest2 = [
+    // { name: "maze", type: "json",  src: "data/img/background/maze_background.json" },
+    { 
+        name: "maze", 
+        type: "image", 
+        src: "./data/img/background/maze_background.png" 
+    },
+    { 
+        name: "maze", 
+        type: "image", 
+        src: "./data/img/background/maze_background_all" 
+    },
+];
+
 export default DataManifest;
