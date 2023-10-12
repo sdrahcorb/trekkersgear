@@ -1,5 +1,5 @@
 // a melonJS data manifest
-// note : this is note a webpack manifest
+// note : this is not a webpack manifest
 const DataManifest = [
 
     /* Bitmap Text */

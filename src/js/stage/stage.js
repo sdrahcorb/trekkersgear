@@ -1,4 +1,4 @@
-// import { state } from "../../../node_modules/melonjs/dist/types/index";
+// import {Stage} from "melonjs";
 
 // /**
 //  * @classdesc

@@ -3,6 +3,7 @@ import {
     loader,
     state,
     device,
+    game,
     video,
     utils,
     plugin,
@@ -12,7 +13,7 @@ import {
 import "index.css";
 
 import TitleScreen from "js/stage/title.js";
-// import PlayScreen from "js/stage/play.js";
+import PlayScreen from "js/stage/play.js";
 import EndTitleScreen from "js/stage/end-title.js";
 import PlayerEntity from "js/renderables/player.js";
 
@@ -45,7 +46,7 @@ device.onReady(() => {
     loader.preload(DataManifest, function() {
         // set the user defined game stages
         state.set(state.MENU, new TitleScreen());
-        // state.set(state.PLAY, new PlayScreen());
+        state.set(state.PLAY, new PlayScreen());
         state.set(state.GAME_END, new EndTitleScreen());
 
         // add our player entity in the entity pool

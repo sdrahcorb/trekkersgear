@@ -1,5 +1,4 @@
-import {Stage} from "melonjs";
-import { game } from "../../../node_modules/melonjs/dist/types/index";
+import {UITextButton, TextureAtlas, loader, Stage, game} from "melonjs";
 
 class PlayButton extends UITextButton {
     constructor(x,y) {          super(x,y, {
@@ -29,11 +28,12 @@ class PlayScreen extends Stage {
     onResetEvent() {
         // load the texture atlas file
         const atlas = new TextureAtlas(
-            loader.getPNG("maze_background")
+            loader.getImage("Maze")
         );
 
-        game.world.addChild(new background("maze_background", 0, 0,)
-        );
+        game.world.addChild(atlas, 0, 0);
+
+        console.log("onReset");
 
     };
     /**
@@ -56,18 +56,24 @@ class PlayScreen extends Stage {
     // }
 };
 
+console.log(game);
+
    // viewport width and height
-   const w = game.viewport.width;
-   const h = game.viewport.height;
+   const w = 20;
+   const h = 20;
 
    // create background sprite
-   const background = atlas.createSpriteFromName("maze_background");
+   const atlas = new TextureAtlas(
+    loader.getImage("Maze")
+    );
+
+//    const background = atlas.createSpriteFromName("Maze");
 
    // set its position to the middle of the viewport
-   background.pos.set(w/2, h/2);
+   atlas.pos.set(w/2, h/2);
 
    // add sprite to the scene
-   game.world.addChild(background, 1);
+   game.world.addChild(atlas, 1);
 
 export default PlayScreen;
 
