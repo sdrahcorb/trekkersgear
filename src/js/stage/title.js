@@ -1,4 +1,4 @@
-import {UITextButton, audio, Stage, game, ColorLayer, Color, BitmapText, state} from "melonjs";
+import {UITextButton, audio, Stage, game, ColorLayer, Color, BitmapText, state, Text} from "melonjs";
 
 // console.log(new Color().parseHex("#202020"));
 // debugger;
@@ -31,18 +31,19 @@ class TitleScreen extends Stage {
         // add a gray background to the default Stage
         game.world.addChild(new ColorLayer("background", "#202020"));
 
-        console.log(game);
+        console.log(game);       
 
         // add a font text disTitle object
-        // game.world.addChild(new BitmapText(game.viewport.width / 2, game.viewport.height / 2,  {
-        game.world.addChild(new BitmapText(20, 20,  {
+        // game.world.addChild(new BitmapText(game.viewport.width / Nu, game.viewport.height / Nu,  {
+        game.world.addChild(new BitmapText(609, 281,  {
             font : "PressStart2P",
-            size : 4.0,
+            size : 2.0,
+            fillStyle:"#FFFFFF",
             textBaseline : "middle",
             textAlign : "center",
-            text : "Hello World !"
+            text : "Hello World!"
         }));
-        game.world.addChild(new TitleButton(0,0));
+        game.world.addChild(new TitleButton(409,60,));
     }
 };
 

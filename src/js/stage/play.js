@@ -26,10 +26,24 @@ class PlayButton extends UITextButton {
 class PlayScreen extends Stage {
 
     onResetEvent() {
-        // load the texture atlas file
+        // load the texture atlas file    
+        // create background sprite
         const atlas = new TextureAtlas(
             loader.getImage("Maze")
         );
+
+   // viewport width and height
+   const w = 609;
+   const h = 300;
+
+//    const background = atlas.createSpriteFromName("Maze");
+
+   // set its position to the middle of the viewport
+   atlas.pos.set(w/609, h/300);
+
+   // add sprite to the scene
+   game.world.addChild(atlas, 1);
+
 
         game.world.addChild(atlas, 0, 0);
 
@@ -57,23 +71,6 @@ class PlayScreen extends Stage {
 };
 
 console.log(game);
-
-   // viewport width and height
-   const w = 20;
-   const h = 20;
-
-   // create background sprite
-   const atlas = new TextureAtlas(
-    loader.getImage("Maze")
-    );
-
-//    const background = atlas.createSpriteFromName("Maze");
-
-   // set its position to the middle of the viewport
-   atlas.pos.set(w/2, h/2);
-
-   // add sprite to the scene
-   game.world.addChild(atlas, 1);
 
 export default PlayScreen;
 
