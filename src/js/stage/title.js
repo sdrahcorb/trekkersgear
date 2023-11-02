@@ -41,7 +41,7 @@ class TitleScreen extends Stage {
             fillStyle:"#FFFFFF",
             textBaseline : "middle",
             textAlign : "center",
-            text : "Hello World!"
+            text : "Hello World !"
         }));
         game.world.addChild(new TitleButton(409,60,));
     }
