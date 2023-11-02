@@ -54,6 +54,16 @@ device.onReady(() => {
 
         // Start the game.
         state.change(state.MENU);
+        
+        // Start playing
         // state.change(state.PLAY);
     });
+
+
+    // loader.get(DataManifest, function() {
+    //     state.change(state.PLAY);
+    // });
+
+
+
 });

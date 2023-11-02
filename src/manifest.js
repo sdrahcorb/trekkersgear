@@ -1,3 +1,4 @@
+
 // a melonJS data manifest
 // note : this is not a webpack manifest
 const DataManifest = [
