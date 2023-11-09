@@ -63,7 +63,6 @@ class PlayScreen extends Stage {
 
 
    // add sprite to the scene
-   game.world.addChild(atlas, 1);
    
    game.world.addChild(atlas, 0, 0);
 
